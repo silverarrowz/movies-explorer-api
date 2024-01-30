@@ -5,11 +5,11 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
     validate: {
       validator: validator.isEmail,
-      message: 'Некорректный email',
+      message: 'Введен некорректный e-mail',
     },
-    unique: true,
   },
   password: {
     type: String,

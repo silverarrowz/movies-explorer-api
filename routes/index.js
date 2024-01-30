@@ -9,8 +9,8 @@ const movieRouter = require('./movies');
 
 const NotFoundError = require('../errors/NotFoundError');
 
-router.post('/signin', validateLogin, login);
 router.post('/signup', validateCreateUser, createUser);
+router.post('/signin', validateLogin, login);
 
 router.use(auth);
 
